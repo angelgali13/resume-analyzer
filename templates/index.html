@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Resume Analyzer</title>
+</head>
+<body style="text-align:center; margin-top:100px;">
+
+    <h1>🚀 ATS Resume Analyzer</h1>
+
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="resume" required><br><br>
+
+        <textarea name="job_desc" placeholder="Paste Job Description here..." 
+        style="width:400px; height:150px;" required></textarea><br><br>
+
+        <button type="submit">Analyze Resume</button>
+
+    </form>
+
+</body>
+</html>

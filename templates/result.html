@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+</head>
+<body style="font-family:Arial;">
+
+    <h1>📊 ATS Dashboard</h1>
+
+    <h2>🎯 Score: {{ score }}%</h2>
+
+    <hr>
+
+    <h3>✅ Skills Found</h3>
+    <ul>
+        {% for skill in found %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>❌ Missing Skills</h3>
+    <ul>
+        {% for skill in missing %}
+            <li style="color:red;">{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>💡 Suggestions</h3>
+    <ul>
+        {% for s in suggestions %}
+            <li>{{ s }}</li>
+        {% endfor %}
+    </ul>
+
+    <hr>
+
+    <h3>📄 Resume Preview</h3>
+    <iframe src="/uploads/{{ filename }}" width="600" height="500"></iframe>
+
+</body>
+</html>
